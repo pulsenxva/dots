@@ -1,107 +1,62 @@
 {
-    "custom/arch": {
-        "format": "󰣇",
-        "tooltip": true,
-        "tooltip-format": "btw"
-    },
-    
-    "hyprland/window": {
-        "return-type": "json",
-        "format": "{}",
-        "rewrite": {
-            "": "Hyprland"
-        }
-    },
-    "tray": {
-        "show-passive-items": true,
-        "spacing": 10
-    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
+    },  
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            "": "Hyprland"
         }
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+        "format": "VOL {volume}% |",
+        "format-muted": "VOL mute |",
         "on-click": "blueman-manager"
     },
+
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "WIFI |",
+        "format-ethernet": "ETH {ipaddr} |",
+        "format-disconnected": "NO NET |"
     },
+
     "cpu": {
-        "format": "  {usage}%",
-        "tooltip": true
+        "format": "CPU {usage}% |",
+        "tooltip": false
     },
-    "memory": {
-        "format": "  {}%",
-	      "tooltip": true
-    },
+
     "temperature": {
         "interval": 10,
         "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
-        "critical-threshold": 100,
-        "format-critical": " {temperatureC}",
-        "format": " {temperatureC}°C"
+        "format": "{temperatureC}°C |"
     },
+
     "hyprland/language": {
-       "format": "  {}",
-       "format-en": "EN",
-       "format-ru": "RU"
+        "format": "{}  |",
+        "format-en": "US",
+        "format-ru": "RU"
     },
+
     "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{time}  {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "BAT {capacity}% |",
+        "format-charging": "BAT+ {capacity}% |",
+        "format-plugged": "BAT AC {capacity}% |"
     },
+
     "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": " {:L%a %d %b}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "bat": "BAT2",
+        "format": "BAT2 {capacity}% |"
     },
     "clock": {
       "format": "{:%d.%m.%Y - %H:%M}",
       "format-alt": "{:%A, %B %d at %R}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
+   "custom/separator": {
+        "format": "| ",
+        "tooltip": false
+    }
 }

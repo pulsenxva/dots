@@ -93,7 +93,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    jetbrains.clion btop brave unzip vscode clangd
+    jetbrains.clion btop brave unzip vscode clang-tools
     git gcc obs-studio gnome-calculator
     vim alacritty neovim libreoffice-fresh
     discord fastfetch vlc steam

@@ -12,8 +12,8 @@
         }
     },
     "pulseaudio": {
-        "format": "VOL {volume}% |",
-        "format-muted": "VOL mute |",
+        "format": " {volume}% |",
+        "format-muted": "  |",
         "on-click": "blueman-manager"
     },
 
@@ -41,9 +41,9 @@
     },
 
     "battery": {
-        "format": "BAT {capacity}% |",
-        "format-charging": "BAT+ {capacity}% |",
-        "format-plugged": "BAT AC {capacity}% |"
+        "format": "{capacity}% |",
+        "format-charging": "+ {capacity}% |",
+        "format-plugged": "AC {capacity}% |"
     },
 
     "battery#bat2": {

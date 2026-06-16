@@ -45,16 +45,15 @@
   };
 
   services = {
-    #xserver.enable = true;
+    xserver.enable = true;
     #desktopManager.plasma6.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      
-      theme = "sddm-astronaut";
+      package = pkgs.kdePackages.sddm;
+      theme = "sddm-astronaut-theme";
       extraPackages = with pkgs; [ 
-      	kdePackages.qtmultimedia
-      	sddm-astronaut
+      	sddm-astronaut       
       ];
     };
     flatpak.enable = true;
@@ -94,9 +93,9 @@
 
   environment.systemPackages = with pkgs; [
     jetbrains.clion btop brave unzip vscode clang-tools
-    git gcc obs-studio gnome-calculator
+    git gcc obs-studio gnome-calculator sddm-astronaut
     vim alacritty neovim libreoffice-fresh
-    discord fastfetch vlc steam
+    discord fastfetch vlc steam 
     
     hyprpolkitagent wl-clipboard wl-clip-persist kitty waybar wofi rofi
     dunst hyprpaper hyprshot hyprlock brightnessctl nautilus swayosd adwaita-icon-theme

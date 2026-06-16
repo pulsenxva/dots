@@ -13,11 +13,11 @@
     "modules-right": [
         //"tray",
         "pulseaudio",
-        "hyprland/language",
-        "network",
-        "cpu",
-        "temperature",
-        "battery",
+        //"hyprland/language",
+        //"network",
+        //"cpu",
+        //"temperature",
+        //"battery",
         "battery#bat2",
         "clock"
     ],

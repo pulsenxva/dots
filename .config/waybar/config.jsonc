@@ -1,13 +1,14 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 26,
+    "height": 28,
     "spacing": 2,
 
     "modules-left": [
         "hyprland/workspaces",
-        "custom/separator",
-        "hyprland/window"
+        "custom/jj"
+        //"custom/separator",
+        //"hyprland/window"
     ],
     "modules-center": [],
     "modules-right": [
@@ -21,7 +22,13 @@
         "battery#bat2",
         "clock"
     ],
-
+    "custom/jj": {
+        //"exec": "echo ' NixOS'",
+        "exec": "echo '[J]'",
+        "interval": 60,
+        "format": "{}",
+        "tooltip": false
+    },
     "include": [
         "~/.config/waybar/modules.json"
     ]

@@ -1,46 +1,46 @@
 window {
-  background-color: #1a1b26;
+    background-color: #282828;
 }
 
 * {
-  font-family: "Jetbrains Mono";
-  color: #fff;
+    font-family: "JetBrains Mono";
+    color: #ebdbb2;
 }
 
 #scroll {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 #input {
-  background-color: #1a1b26;
-  color: #c0caf5;
-  outline: none;
-  box-shadow: none;
-  border: 0;
-  border-radius: 0;
-  font-size: 1rem;
-  padding: 0.5rem;
+    background-color: #282828;
+    color: #ebdbb2;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 0.5rem;
 }
 
 #inner-box {
-  margin: 0.5rem;
-  font-size: 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
 }
 
 #img {
-  margin: 10px 10px;
+    margin: 10px;
 }
 
 #entry {
-  border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.35rem;
 }
 
 #entry:selected {
-  background-color: #c0caf5;
-  outline: none;
+    background-color: #3c3836;
+    outline: none;
 }
 
 #text:selected {
-  color: #1a1b26;
+    color: #83a598;
 }
-

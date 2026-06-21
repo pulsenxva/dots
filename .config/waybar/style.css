@@ -5,7 +5,8 @@
 }
 
 window#waybar {
-  background: #282828;
+  /*background: #282828;*/
+  background:#1d2021;
   color: #ebdbb2;
 }
 

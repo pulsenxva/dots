@@ -1,3 +1,5 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
 window_padding_width 0
 
 font_family      JetBrains Mono
@@ -7,13 +9,9 @@ font_size 15.0
 scrollbar_opacity 0
 scrollback_indicator_opacity 0
 
-cursor_trail 0
+cursor_trail 1
 confirm_os_window_close 0
 background_opacity 0.75
-#background_opacity 1
-
-#background #282828 
-
 # selection_foreground #ffffff
 # selection_background #14b8a6
 
@@ -61,6 +59,6 @@ window_padding_width 10
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark Hard
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME

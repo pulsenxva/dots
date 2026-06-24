@@ -1,46 +1,50 @@
 return {
   {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
     priority = 1000,
     config = function()
-      require("tokyonight").setup({
-        style = "night",    -- "night", "storm", "day", "moon"
+      require("kanagawa").setup({
+        compile = false,
+        undercurl = true,
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = { italic = true },
+        statementStyle = {},
+        typeStyle = {},
         transparent = true,
-        terminal_colors = true,
-        styles = {
-          comments = { italic = true },
-          keywords = { italic = true },
-          functions = {},
-          variables = {},
-          sidebars = "dark",
-          floats = "dark",
-        },
-        sidebars = { "qf", "vista_kind", "terminal", "packer" },
-        day_brightness = 0.3,
-        hide_inactive_statusline = false,
-        dim_inactive = false,
-        lualine = {
-          transparent = false,
+
+        dimInactive = false,
+        terminalColors = true,
+
+        theme = "wave", -- wave, dragon, lotus
+
+        colors = {
+          theme = {
+            all = {
+              ui = {
+                bg_gutter = "none",
+              },
+            },
+          },
         },
       })
-      vim.cmd.colorscheme("tokyonight")
+
+      vim.cmd.colorscheme("kanagawa")
     end,
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "kanagawa",
     },
   },
 
   {
     "nvim-lualine/lualine.nvim",
-    opts = {
-      options = {
-        theme = "tokyonight",
-      },
-    },
+    opts = function(_, opts)
+      opts.options.theme = "auto"
+    end,
   },
 }

@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/gruvbox.toml"]
+import = ["~/.config/alacritty/themes/kanagawa.toml"]
 
 [font]
 size = 15.0
@@ -9,6 +9,7 @@ x = 20
 y = 20
 
 [window]
+dimensions = { columns = 100, lines = 37 }
 opacity = 1
 blur = true
 

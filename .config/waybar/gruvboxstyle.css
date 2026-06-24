@@ -5,8 +5,9 @@
 }
 
 window#waybar {
-  background: #1F1F28;
-  color: #DCD7BA;
+  /*background: #282828;*/
+  background:#1d2021;
+  color: #ebdbb2;
 }
 
 .modules-left,
@@ -28,7 +29,7 @@ window#waybar {
 #language {
   padding: 0 6px;
   border-radius: 0;
-  color: #DCD7BA;
+  color: #ebdbb2;
 }
 
 #clock:hover,
@@ -39,13 +40,13 @@ window#waybar {
 #network:hover,
 #workspaces:hover,
 #pulseaudio:hover {
-  color: #7E9CD8; /* crystalBlue */
+    color: #83a598;
 }
 
 #workspaces button {
   background: transparent;
   font-size: 12px;
-  color: #727169; /* sumiInk4 */
+  color: #a89984;
   border: none;
   padding: 0 5px;
 }
@@ -53,13 +54,14 @@ window#waybar {
 #workspaces button:hover {
   background: transparent;
   box-shadow: none;
-  color: #7E9CD8;
+  color: #83a598;
 }
 
 #workspaces button.active {
-  color: #DCD7BA;
-  /* Если захочешь акцент */
-  /* border-bottom: 2px solid #98BB6C; */
+  color: #ebdbb2;
+  /*border-bottom: 2px solid #83a598;
+  border-radius: 0;*/
+  /*color: #d3869b;*/
 }
 
 #clock {

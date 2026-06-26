@@ -1,0 +1,51 @@
+# Alacritty theme (harmonized with Waybar dark minimal style)
+
+[colors]
+
+[colors.primary]
+background = "#181A1F"
+foreground = "#DCD7BA"
+
+[colors.normal]
+black   = "#090B10"
+red     = "#C34A4A"
+green   = "#6F8F6A"
+yellow  = "#B8A06A"
+blue    = "#7FA2B8"
+magenta = "#8B7AA8"
+cyan    = "#6F9A95"
+white   = "#C8C2B2"
+
+[colors.bright]
+black   = "#5E6572"
+red     = "#E06C6C"
+green   = "#8FBF7A"
+yellow  = "#E6C98A"
+blue    = "#86B3C9"
+magenta = "#9A8FB8"
+cyan    = "#7FB3AC"
+white   = "#E5DFCF"
+
+[colors.selection]
+text       = "#181A1F"
+background = "#2A3A45"
+
+[colors.cursor]
+text   = "#181A1F"
+cursor = "#C8C2B2"
+
+[colors.vi_mode_cursor]
+text   = "#181A1F"
+cursor = "#C8C2B2"
+
+[colors.search.matches]
+foreground = "#181A1F"
+background = "#DCD7BA"
+
+[colors.search.focused_match]
+foreground = "#181A1F"
+background = "#8BA4B0"
+
+[colors.footer_bar]
+background = "#14171C"
+foreground = "#DCD7BA"

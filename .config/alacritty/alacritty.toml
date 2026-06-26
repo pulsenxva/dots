@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/kanagawa.toml"]
+import = ["~/.config/alacritty/themes/default.toml"]
 
 [font]
 size = 15.0
@@ -10,7 +10,7 @@ y = 20
 
 [window]
 dimensions = { columns = 100, lines = 37 }
-opacity = 1
+opacity = 0.9
 blur = true
 
 # Cursor style

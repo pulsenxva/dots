@@ -30,7 +30,6 @@
   };
 
   time.timeZone = "Europe/Moscow";
-
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -45,15 +44,17 @@
   };
 
   services = {
+    udisks2.enable = true;
+    gvfs.enable = true;
     xserver.enable = true;
-    #desktopManager.plasma6.enable = true;
+    desktopManager.plasma6.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      package = pkgs.kdePackages.sddm;
+      #package = pkgs.kdePackages.sddm;
       theme = "sddm-astronaut-theme";
       extraPackages = with pkgs; [ 
-      	sddm-astronaut       
+      	sddm-astronaut
       ];
     };
     flatpak.enable = true;
@@ -92,14 +93,54 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    jetbrains.clion btop brave unzip vscode clang-tools
-    git gcc obs-studio gnome-calculator sddm-astronaut
-    vim alacritty neovim libreoffice-fresh
-    discord fastfetch vlc steam 
-    
-    hyprpolkitagent wl-clipboard wl-clip-persist kitty waybar wofi rofi
-    dunst hyprpaper hyprshot hyprlock brightnessctl nautilus swayosd adwaita-icon-theme
+
+    jetbrains.clion
+    btop
+    brave
+    chromium
+    unzip
+    vscode
+    clang-tools
+    git
+    gcc
+    python3
+    gnumake
+    nodejs
+    nmap
+    obs-studio
+    gnome-calculator
+    sddm-astronaut
+
+    alacritty
+    neovim
+    onlyoffice-desktopeditors
+    discord
+    fastfetch
+    vlc
+    steam
+    librewolf
+    cava
+
+    hyprpolkitagent
+    wl-clipboard
+    wl-clip-persist
+    kitty
+    waybar
+    wofi
+    rofi
+    dunst
+    hyprpaper
+    hyprshot
+    hyprlock
+    brightnessctl
+    nautilus
+    adwaita-icon-theme
+    udiskie
+    tmux
+
   ];
+  
+  environment.variables.NIX_LD = "${pkgs.glibc}/lib/ld-linux-x86-64.so.2";
 
   xdg.portal = {
     enable = true;
@@ -108,7 +149,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
+    nerd-fonts.fira-code 
     jetbrains-mono font-awesome noto-fonts noto-fonts-cjk-sans noto-fonts-cjk-serif 
   ];
 

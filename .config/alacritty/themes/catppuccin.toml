@@ -1,0 +1,58 @@
+# Catppuccin Mocha theme for Alacritty
+
+[colors]
+# Default colors
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+# Normal colors
+[colors.normal]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+# Bright colors
+[colors.bright]
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
+
+# Selection colors
+[colors.selection]
+text       = "#cdd6f4"
+background = "#585b70"
+
+# Cursor colors
+[colors.cursor]
+text   = "#1e1e2e"
+cursor = "#f5e0dc"
+
+# Vi mode cursor colors
+[colors.vi_mode_cursor]
+text   = "#1e1e2e"
+cursor = "#f5e0dc"
+
+# Search colors
+[colors.search]
+[colors.search.matches]
+foreground = "#1e1e2e"
+background = "#f9e2af"
+[colors.search.focused_match]
+foreground = "#1e1e2e"
+background = "#f38ba8"
+
+# Footer bar colors
+[colors.footer_bar]
+background = "#181825"
+foreground = "#cdd6f4"

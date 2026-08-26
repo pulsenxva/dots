@@ -1,0 +1,56 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      "": "Hyprland"
+    }
+  },
+  "pulseaudio": {
+    "format": " {volume}% |",
+    "format-muted": "  |",
+    "on-click": "blueman-manager"
+  },
+  "network": {
+    "format-wifi": "WIFI |",
+    "format-ethernet": "ETH {ipaddr} |",
+    "format-disconnected": "NO NET |"
+  },
+  "cpu": {
+    "format": "CPU {usage}% |",
+    "tooltip": false
+  },
+  "temperature": {
+    "interval": 10,
+    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+    "format": "{temperatureC}°C |"
+  },
+  "hyprland/language": {
+    "format": "{}  |",
+    "format-en": "US",
+    "format-ru": "RU"
+  },
+  "battery": {
+    "format": " BAT {capacity}% |",
+    "format-charging": "BAT+ {capacity}% |",
+    "format-plugged": "AC {capacity}% |"
+  },
+  "battery#bat2": {
+    "bat": "BAT2",
+    "format": "BAT2 {capacity}% |"
+  },
+  "clock": {
+    "format": "{:%d.%m.%Y - %I:%M %p}",
+    "format-alt": "{:%A, %B %d at %I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "custom/separator": {
+    "format": "| ",
+    "tooltip": false
+  }
+}

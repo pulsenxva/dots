@@ -1,0 +1,58 @@
+# Gruvbox Dark Hard theme for Alacritty
+
+[colors]
+# Default colors
+[colors.primary]
+background = "#1d2021"
+foreground = "#ebdbb2"
+
+# Normal colors
+[colors.normal]
+black   = "#3c3836"
+red     = "#cc241d"
+green   = "#98971a"
+yellow  = "#d79921"
+blue    = "#458588"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#a89984"
+
+# Bright colors
+[colors.bright]
+black   = "#928374"
+red     = "#fb4934"
+green   = "#b8bb26"
+yellow  = "#fabd2f"
+blue    = "#83a598"
+magenta = "#d3869b"
+cyan    = "#8ec07c"
+white   = "#fbf1c7"
+
+# Selection colors
+[colors.selection]
+text       = "#ebdbb2"
+background = "#458588"
+
+# Cursor colors
+[colors.cursor]
+text   = "#665c54"
+cursor = "#bdae93"
+
+# Vi mode cursor colors
+[colors.vi_mode_cursor]
+text   = "#665c54"
+cursor = "#bdae93"
+
+# Search colors
+[colors.search]
+[colors.search.matches]
+foreground = "#1d2021"
+background = "#ebdbb2"
+[colors.search.focused_match]
+foreground = "#1d2021"
+background = "#d65d0e"
+
+# Footer bar colors
+[colors.footer_bar]
+background = "#171a1a"
+foreground = "#ebdbb2"

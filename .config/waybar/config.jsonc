@@ -1,0 +1,36 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 2,
+    "margin": "3 4 0 4",
+
+    "modules-left": [
+        "hyprland/workspaces"
+        //"custom/jj"
+        //"custom/separator",
+        //"hyprland/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        //"tray",
+        "pulseaudio",
+        "hyprland/language",
+        "network",
+        "cpu",
+        "temperature",
+        "battery",
+        "battery#bat2",
+        "clock"
+    ],
+    "custom/jj": {
+        //"exec": "echo ' NixOS'",
+        "exec": "echo '[J]'",
+        "interval": 60,
+        "format": "{}",
+        "tooltip": false
+    },
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

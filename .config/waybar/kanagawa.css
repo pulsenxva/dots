@@ -1,0 +1,67 @@
+* {
+  font-family: "Fira Sans Semibold", monospace;
+  font-size: 14.5px;
+  transition: none;
+}
+
+window#waybar {
+  background: #1F1F28;
+  color: #DCD7BA;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#language {
+  padding: 0 6px;
+  border-radius: 0;
+  color: #DCD7BA;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#workspaces:hover,
+#pulseaudio:hover {
+  color: #7E9CD8; /* crystalBlue */
+}
+
+#workspaces button {
+  background: transparent;
+  font-size: 12px;
+  color: #727169; /* sumiInk4 */
+  border: none;
+  padding: 0 5px;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  box-shadow: none;
+  color: #7E9CD8;
+}
+
+#workspaces button.active {
+  color: #DCD7BA;
+  /* Если захочешь акцент */
+  /* border-bottom: 2px solid #98BB6C; */
+}
+
+#clock {
+  padding: 0 12px 0 6px;
+}

@@ -1,10 +1,14 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
+
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
+in
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    (import "${home-manager}/nixos")
+  ];
 
   boot.loader = {
     grub = {
@@ -20,8 +24,19 @@
     bluetooth.enable = true;
     graphics = {
       enable = true;
-      enable32Bit = true; 
+      enable32Bit = true;
     };
+  };
+
+  home-manager.users.jonathan = { config, pkgs, ... }: {
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Graphite-Dark";
+        package = pkgs.graphite-gtk-theme;
+      };
+    };
+    home.stateVersion = "26.05";
   };
 
   security = {
@@ -30,6 +45,7 @@
   };
 
   time.timeZone = "Europe/Moscow";
+  
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -39,7 +55,6 @@
     users."jonathan" = {
       isNormalUser = true;
       extraGroups = [ "networkmanager" "wheel" ];
-      shell = pkgs.zsh;
     };
   };
 
@@ -47,14 +62,13 @@
     udisks2.enable = true;
     gvfs.enable = true;
     xserver.enable = true;
-    desktopManager.plasma6.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
       #package = pkgs.kdePackages.sddm;
       theme = "sddm-astronaut-theme";
-      extraPackages = with pkgs; [ 
-      	sddm-astronaut
+      extraPackages = with pkgs; [
+        sddm-astronaut
       ];
     };
     flatpak.enable = true;
@@ -70,13 +84,14 @@
       };
     };
   };
- 
+
   programs = {
     nano.enable = false;
     vim.enable = true;
-    zsh.enable = true;
     firefox.enable = true;
+    dconf.enable = true;
     steam.enable = true;
+    nix-ld.enable = true;
     hyprland = {
       enable = true;
       withUWSM = true;
@@ -86,14 +101,13 @@
       enable = true;
       tunMode.enable = true;
     };
-  }; 
+  };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-
     jetbrains.clion
     btop
     brave
@@ -110,6 +124,8 @@
     obs-studio
     gnome-calculator
     sddm-astronaut
+    glib
+    gsettings-desktop-schemas
 
     alacritty
     neovim
@@ -118,8 +134,11 @@
     fastfetch
     vlc
     steam
-    librewolf
     cava
+    glib
+    papirus-icon-theme
+    adwaita-icon-theme
+    gnome-themes-extra
 
     hyprpolkitagent
     wl-clipboard
@@ -132,15 +151,15 @@
     hyprpaper
     hyprshot
     hyprlock
+    hyprsunset
     brightnessctl
     nautilus
     adwaita-icon-theme
     udiskie
     tmux
-
   ];
-  
-  environment.variables.NIX_LD = "${pkgs.glibc}/lib/ld-linux-x86-64.so.2";
+
+  #environment.variables.NIX_LD = "${pkgs.glibc}/lib/ld-linux-x86-64.so.2";
 
   xdg.portal = {
     enable = true;
@@ -149,10 +168,13 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code 
-    jetbrains-mono font-awesome noto-fonts noto-fonts-cjk-sans noto-fonts-cjk-serif 
+    nerd-fonts.fira-code
+    jetbrains-mono
+    font-awesome
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
   ];
 
   system.stateVersion = "26.05";
-
 }

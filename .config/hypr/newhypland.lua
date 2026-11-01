@@ -25,6 +25,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     --hl.exec_cmd("swayosd-server")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hyprsunset")
     hl.exec_cmd("dunst & waybar")
     hl.exec_cmd("wl-clipboard-history -t")
     hl.exec_cmd("wl-paste --watch cliphist store")
@@ -143,19 +144,14 @@ hl.config({
             natural_scroll = true,
             scroll_factor = 0.3
         }
-    },
-    device = {
-        {
-            name = "elan2611:00-04f3:31dc-touchpad",
-            sensitivity = 1.0
-        },
-        {
-            name = "elan2611:00-04f3:31dc-mouse",
-            sensitivity = 1.0
-        }
     }
 })
 
+hl.device({
+    name = "elan2611:00-04f3:31dc-touchpad",
+    sensitivity = 0.1
+})
+--
 -- ==========================================
 -- KEYBINDINGS
 -- ==========================================

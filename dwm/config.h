@@ -7,14 +7,15 @@ static const unsigned int snap      = 32;       /* snap distance of floating win
 static const unsigned int refreshrate = 60;     /* refresh rate while moving/resizing with the mouse */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Fira Sans:style=SemiBold:pixelsize=13" };   /* font from waybar style.css */
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10" };   /* font from waybar style.css */
 static const char dmenufont[]       = "Fira Sans:style=SemiBold:pixelsize=13";
 static const char col_gray1[]       = "#1a1a1a";   /* inactive window border */
 static const char col_bar[]         = "#181a1f";   /* bar background (rgba 24,26,31 from waybar) */
 static const char col_gray2[]       = "#2a2e37";   /* selected tag background */
 static const char col_gray3[]       = "#DCD7BA";   /* text color (same as waybar) */
 static const char col_gray4[]       = "#DCD7BA";   /* selected tag text color */
-static const char col_cyan[]        = "#268bd2";   /* active window border */
+//static const char col_cyan[]        = "#268bd2";   /* active window border */
+static const char col_cyan[]        = "#DCD7BA";   /* active window border */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_bar,   col_gray1 },
@@ -67,7 +68,7 @@ static const char *emacscmd[]   = { "emacs", NULL };
 static const char *lockcmd[]    = { "/bin/sh", "-c", "$HOME/.local/bin/lock.sh", NULL };  /* hyprlock replacement, with blur */
 static const char *calccmd[]    = { "gnome-calculator", "--mode=keyboard", NULL };
 static const char *bluetoothcmd[]={ "blueman-manager", NULL };
-static const char *networkcmd[] = { "throne", NULL };
+static const char *networkcmd[] = { "/opt/Throne/Throne", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key                        function        argument */
@@ -87,7 +88,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_m,                      spawn,          {.v = bluetoothcmd } },
 	{ MODKEY,                       XK_n,                      spawn,          {.v = networkcmd } },
 	/* clipboard history (needs clipmenu and clipmenud running in autostart) */
-	{ MODKEY,                       XK_o,                      spawn,          SHCMD("clipmenu") },
+	{ MODKEY,                       XK_o,                      spawn,          SHCMD("copyq toggle") },
 	/* region screenshot (maim + xclip) */
 	{ MODKEY|ShiftMask,             XK_s,                      spawn,          SHCMD("mkdir -p ~/Pictures/Screenshots; f=~/Pictures/Screenshots/$(date +%F_%H-%M-%S).png; maim -s \"$f\" && xclip -selection clipboard -t image/png \"$f\"") },
 
@@ -113,7 +114,7 @@ static const Key keys[] = {
 	{ ALT,                          XK_Down,                   movestack,      {.i = +1 } },
 	*/
 	/* without the patch: swap the selected window with master */
-	{ MODKEY|ShiftMask,             XK_Return,                 zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_Return,                 zoomkeep,           {0} },
 
 	/* master area width: Super+[ and Super+] */
 	{ MODKEY,                       XK_bracketleft,            setmfact,       {.f = -0.02} },

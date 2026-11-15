@@ -70,6 +70,8 @@ static const char *calccmd[]    = { "gnome-calculator", "--mode=keyboard", NULL 
 static const char *bluetoothcmd[]={ "blueman-manager", NULL };
 static const char *networkcmd[] = { "/opt/Throne/Throne", NULL };
 
+#include "movestack.c"
+
 static const Key keys[] = {
 	/* modifier                     key                        function        argument */
 
@@ -107,12 +109,11 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Right,                  focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Down,                   focusstack,     {.i = +1 } },
 
-	/* move windows with Alt+arrows: needs the movestack patch, then uncomment
 	{ ALT,                          XK_Left,                   movestack,      {.i = -1 } },
 	{ ALT,                          XK_Up,                     movestack,      {.i = -1 } },
 	{ ALT,                          XK_Right,                  movestack,      {.i = +1 } },
 	{ ALT,                          XK_Down,                   movestack,      {.i = +1 } },
-	*/
+
 	/* without the patch: swap the selected window with master */
 	{ MODKEY|ShiftMask,             XK_Return,                 zoomkeep,           {0} },
 

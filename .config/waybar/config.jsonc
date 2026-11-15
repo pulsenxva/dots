@@ -15,12 +15,11 @@
     "modules-right": [
         //"tray",
         "pulseaudio",
-        "hyprland/language",
+        //"hyprland/language",
         "network",
         "cpu",
         "temperature",
         "battery",
-        "battery#bat2",
         "clock"
     ],
     "custom/jj": {

@@ -1,5 +1,5 @@
 * {
-  font-family: "Fira Sans Semibold", monospace;
+  font-family: "Fira Sans Semibold", "Symbols Nerd Font", monospace;
   font-size: 13px;
   transition: none;
 }
@@ -41,7 +41,7 @@ window#waybar {
   color: #8BA4B0;
 }*/
 
-#workspaces button {
+/*#workspaces button {
   background: transparent;
   border: none;
   padding: 0 6px;
@@ -57,6 +57,30 @@ window#waybar {
 }
 
 #workspaces button.active {
+  color: #DCD7BA;
+}*/
+#workspaces button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 8px;
+  margin: 0;
+  min-width: 0;
+  box-shadow: none;
+  text-shadow: none;
+
+  font-size: 12px;
+  color: #DCD7BA;
+}
+
+#workspaces button:hover {
+  background: rgba(220, 215, 186, 0.08);
+  box-shadow: none;
+  color: #DCD7BA;
+}
+
+#workspaces button.active {
+  background: #363A45;
   color: #DCD7BA;
 }
 
